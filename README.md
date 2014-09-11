@@ -32,6 +32,8 @@ var data = { foo : 1, bar : 2 };
 React.renderComponent(<App data={data} />, document.body);
 ```
 
+Working example: http://jsfiddle.net/WickyNilliams/34L71yk4/
+
 ## Further info
 
 This component renders a textarea, whose value is the value prop. On keydown, if the user hasn't currently selected any text on the page *and* the cmd/ctrl key is pressed, then the textarea is focussed and the text inside it is selected. When the user hits the 'c' key, the text inside the textarea is copied.
