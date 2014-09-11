@@ -13,5 +13,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nick Williams",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "react": "^0.11.1"
+  }
 }
