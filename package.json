@@ -1,0 +1,17 @@
+{
+  "name": "react-clipboard",
+  "version": "1.0.0",
+  "description": "component to allow user to easily copy text",
+  "keywords": [
+    "react",
+    "react-component",
+    "copy",
+    "clipboard"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nick Williams",
+  "license": "MIT"
+}
