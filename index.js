@@ -23,7 +23,7 @@ var Clipboard = React.createClass({
   },
 
   render: function() {
-    return this.transferPropsTo(React.DOM.textarea(null));
+    return this.transferPropsTo(React.DOM.textarea({ readonly: true }));
   },
 
   handleKeyDown : function(e) {

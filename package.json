@@ -1,6 +1,6 @@
 {
   "name": "react-clipboard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "component to allow user to easily copy text",
   "keywords": [
     "react",
