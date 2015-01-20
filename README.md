@@ -29,14 +29,14 @@ var App = React.createClass({
 });
  
 var data = { foo : 1, bar : 2 };
-React.renderComponent(<App data={data} />, document.body);
+React.render(<App data={data} />, document.body);
 ```
 
-Working example: http://jsfiddle.net/WickyNilliams/34L71yk4/
+Working example: http://jsfiddle.net/WickyNilliams/qm5e1rch/
 
 ## Further info
 
-This component renders a textarea, whose value is the value prop. On keydown, if the user hasn't currently selected any text on the page *and* the cmd/ctrl key is pressed, then the textarea is focussed and the text inside it is selected. When the user hits the 'c' key, the text inside the textarea is copied.
+This component renders a textarea, whose value is the value prop. On keydown, if the user hasn't currently selected any text on the page *and* the <kbd>cmd</kbd> or <kbd>ctrl</kbd> key is pressed, then the textarea is focussed and the text inside it is selected. When the user hits the <kbd>c</kbd> key, the text inside the textarea is copied.
 
 Some CSS is required to "hide" the textarea from the user's view. This should do it:
 
