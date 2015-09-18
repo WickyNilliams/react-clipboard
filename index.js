@@ -8,7 +8,18 @@ var Clipboard = React.createClass({
 
   getDefaultProps: function() {
     return {
-      className : "clipboard"
+      className : "clipboard",
+      style : {
+        "position" : "fixed",
+        "left"     : 0,
+        "top"      : 0,
+        "width"    : 0,
+        "height"   : 0,
+        "padding"  : 0,
+        "margin"   : 0,
+        "z-index"  : 100,
+        "opacity"  : 0
+      }
     };
   },
 

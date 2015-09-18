@@ -38,20 +38,4 @@ Working example: http://jsfiddle.net/WickyNilliams/qm5e1rch/
 
 This component renders a textarea, whose value is the value prop. On keydown, if the user hasn't currently selected any text on the page *and* the <kbd>cmd</kbd> or <kbd>ctrl</kbd> key is pressed, then the textarea is focussed and the text inside it is selected. When the user hits the <kbd>c</kbd> key, the text inside the textarea is copied.
 
-Some CSS is required to "hide" the textarea from the user's view. This should do it:
-
-```css
-.clipboard {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 0;
-  height: 0;
-  padding: 0;
-  margin: 0;
-  z-index: 100;
-  opacity: 0;
-}
-```
-
-There's probably a nicer way, but this is functional.
+Inline styling is used to visibly hide the textarea. This can be overriden via the style prop.
