@@ -1,5 +1,6 @@
 var React = require("react");
 var ReactDOM = require("react-dom");
+var assign = require("react/lib/Object.assign");
 
 var Clipboard = React.createClass({
 
@@ -37,7 +38,7 @@ var Clipboard = React.createClass({
   },
 
   render: function() {
-    return React.createElement("textarea", React.__spread({}, this.props, { readOnly: true }));
+    return React.createElement("textarea", assign({}, this.props, { readOnly: true }));
   },
 
   handleKeyDown : function(e) {
