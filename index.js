@@ -3,7 +3,9 @@ var React = require("react");
 var Clipboard = React.createClass({
 
   propTypes: {
-    value : React.PropTypes.string.isRequired
+    value : React.PropTypes.string.isRequired,
+    className : React.PropTypes.string,
+    style : React.PropTypes.object
   },
 
   getDefaultProps: function() {
