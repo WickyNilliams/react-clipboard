@@ -2,12 +2,15 @@ var React = require("react");
 var ReactDOM = require("react-dom");
 var assign = require("react/lib/Object.assign");
 
+function noop() {}
+
 var Clipboard = React.createClass({
 
   propTypes: {
     value : React.PropTypes.string.isRequired,
     className : React.PropTypes.string,
-    style : React.PropTypes.object
+    style : React.PropTypes.object,
+    onCopy : React.PropTypes.func
   },
 
   getDefaultProps: function() {
@@ -23,7 +26,8 @@ var Clipboard = React.createClass({
         "margin"   : 0,
         "z-index"  : 100,
         "opacity"  : 0
-      }
+      },
+      onCopy : noop
     };
   },
 
@@ -38,7 +42,11 @@ var Clipboard = React.createClass({
   },
 
   render: function() {
-    return React.createElement("textarea", assign({}, this.props, { readOnly: true }));
+    return React.createElement("textarea", assign({}, this.props, { readOnly: true, onCopy : this.handleCopy }));
+  },
+
+  handleCopy : function(e) {
+    this.props.onCopy(e);
   },
 
   handleKeyDown : function(e) {
