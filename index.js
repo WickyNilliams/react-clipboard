@@ -24,7 +24,7 @@ var Clipboard = React.createClass({
         "height"   : 0,
         "padding"  : 0,
         "margin"   : 0,
-        "z-index"  : 100,
+        "zIndex"  : 100,
         "opacity"  : 0
       },
       onCopy : noop
