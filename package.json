@@ -1,6 +1,11 @@
 {
   "name": "react-clipboard",
   "version": "1.2.1",
+  "files" : [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/WickyNilliams/react-clipboard"
