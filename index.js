@@ -17,15 +17,14 @@ var Clipboard = React.createClass({
     return {
       className : "clipboard",
       style : {
-        "position" : "fixed",
-        "left"     : 0,
-        "top"      : 0,
-        "width"    : 0,
-        "height"   : 0,
-        "padding"  : 0,
-        "margin"   : 0,
-        "zIndex"  : 100,
-        "opacity"  : 0
+        position : "fixed",
+        overflow : "hidden",
+        clip     : "rect(0 0 0 0)",
+        height   : 1,
+        width    : 1,
+        margin   : -1,
+        padding  : 0,
+        border   : 0
       },
       onCopy : noop
     };
