@@ -2,6 +2,10 @@
 
 Component to allow the user to easily copy text. Based on the idea from Trello, described in this StackOverflow question: [How does Trello access the user's clipboard?](http://stackoverflow.com/questions/17527870/how-does-trello-access-the-users-clipboard)
 
+## Demo
+
+Live demo here: https://jsfiddle.net/WickyNilliams/umedeLw1/
+
 ## Install
 
 ```bash
