@@ -1,7 +1,7 @@
 {
   "name": "react-clipboard",
-  "version": "1.2.1",
-  "files" : [
+  "version": "1.2.2",
+  "files": [
     "index.js",
     "README.md",
     "LICENSE"
