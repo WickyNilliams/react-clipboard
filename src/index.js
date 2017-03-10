@@ -1,10 +1,10 @@
-var React = require("react");
-var ReactDOM = require("react-dom");
-var assign = require("react/lib/Object.assign");
+const React = require("react");
+const ReactDOM = require("react-dom");
+const assign = require("react/lib/Object.assign");
 
 function noop() {}
 
-var Clipboard = React.createClass({
+const Clipboard = React.createClass({
 
   propTypes: {
     value : React.PropTypes.string.isRequired,
@@ -13,7 +13,7 @@ var Clipboard = React.createClass({
     onCopy : React.PropTypes.func
   },
 
-  getDefaultProps: function() {
+  getDefaultProps() {
     return {
       className : "clipboard",
       style : {
@@ -30,39 +30,39 @@ var Clipboard = React.createClass({
     };
   },
 
-  componentDidMount: function() {
+  componentDidMount() {
     document.addEventListener("keydown", this.handleKeyDown, false);
     document.addEventListener("keyup", this.handleKeyUp, false);
   },
 
-  componentWillUnmount: function() {
+  componentWillUnmount() {
     document.removeEventListener("keydown", this.handleKeyDown, false);
     document.removeEventListener("keyup", this.handleKeyUp, false);
   },
 
-  render: function() {
-    return React.createElement("textarea", assign({}, this.props, { readOnly: true, onCopy : this.handleCopy }));
+  render() {
+    return <textarea {...this.props} readOnly onCopy={this.handleCopy} />
   },
 
-  handleCopy : function(e) {
+  handleCopy(e) {
     this.props.onCopy(e);
   },
 
-  handleKeyDown : function(e) {
-    var metaKeyIsDown = (e.ctrlKey || e.metaKey);
-    var textIsSelected = window.getSelection().toString();
+  handleKeyDown(e) {
+    const metaKeyIsDown = (e.ctrlKey || e.metaKey);
+    const textIsSelected = window.getSelection().toString();
 
     if(!metaKeyIsDown || textIsSelected) {
       return;
     }
 
-    var element = ReactDOM.findDOMNode(this);
+    const element = ReactDOM.findDOMNode(this);
     element.focus();
     element.select();
   },
 
-  handleKeyUp : function(e) {
-    var element = ReactDOM.findDOMNode(this);
+  handleKeyUp(e) {
+    const element = ReactDOM.findDOMNode(this);
     element.blur();
   }
 
