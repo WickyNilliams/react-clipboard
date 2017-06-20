@@ -6,6 +6,10 @@ Component to allow the user to easily copy text. Based on the idea from Trello, 
 
 ```bash
 npm install react-clipboard --save
+
+#or...
+
+yarn add react-clipboard
 ```
 
 ## Usage
