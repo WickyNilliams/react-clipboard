@@ -26,12 +26,14 @@
   "author": "Nick Williams",
   "license": "MIT",
   "peerDependencies": {
+    "prop-types": "^15.5.10",
     "react": "^0.14.0 || ^15.0.0",
     "react-dom": "^0.14.0 || ^15.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
     "babel-core": "^6.23.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-es2015": "^6.22.0",
     "babel-preset-react": "^6.23.0"
   }
