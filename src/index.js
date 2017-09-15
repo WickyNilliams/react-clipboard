@@ -4,6 +4,28 @@ const PropTypes = require("prop-types");
 
 class Clipboard extends React.Component {
 
+  static propTypes = {
+    value : PropTypes.string.isRequired,
+    className : PropTypes.string,
+    style : PropTypes.object,
+    onCopy : PropTypes.func
+  };
+
+  static defaultProps = defaultProps = {
+    className : "clipboard",
+    style : {
+      position : "fixed",
+      overflow : "hidden",
+      clip     : "rect(0 0 0 0)",
+      height   : 1,
+      width    : 1,
+      margin   : -1,
+      padding  : 0,
+      border   : 0
+    },
+    onCopy : () => {} // noop
+  };
+
   componentDidMount() {
     document.addEventListener("keydown", this.handleKeyDown, false);
     document.addEventListener("keyup", this.handleKeyUp, false);
@@ -40,28 +62,6 @@ class Clipboard extends React.Component {
     element.blur();
   }
 
-};
-
-Clipboard.propTypes = {
-  value : PropTypes.string.isRequired,
-  className : PropTypes.string,
-  style : PropTypes.object,
-  onCopy : PropTypes.func
-};
-
-Clipboard.defaultProps = {
-  className : "clipboard",
-  style : {
-    position : "fixed",
-    overflow : "hidden",
-    clip     : "rect(0 0 0 0)",
-    height   : 1,
-    width    : 1,
-    margin   : -1,
-    padding  : 0,
-    border   : 0
-  },
-  onCopy : () => {} // noop
 };
 
 module.exports = Clipboard;
