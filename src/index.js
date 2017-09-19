@@ -11,7 +11,7 @@ class Clipboard extends React.Component {
     onCopy : PropTypes.func
   };
 
-  static defaultProps = defaultProps = {
+  static defaultProps = {
     className : "clipboard",
     style : {
       position : "fixed",
