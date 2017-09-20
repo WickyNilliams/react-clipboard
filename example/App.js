@@ -16,7 +16,7 @@ class Mouse extends React.Component {
   }
 
   render() {
-    return nutll;
+    return null;
   }
 }
 
