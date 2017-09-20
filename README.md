@@ -14,7 +14,7 @@ yarn add react-clipboard
 
 ## Usage
 
-See the [example](example).
+See the [example](example). Or play with a working example: https://codesandbox.io/s/24wyl020wp.
 
 ### Props
 
